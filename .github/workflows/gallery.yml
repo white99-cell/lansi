@@ -1,0 +1,52 @@
+name: Auto Generate Image Gallery
+
+on:
+  push:
+    paths:
+      - '**.png'
+      - '**.jpg'
+      - '**.jpeg'
+    branches:
+      - main  # 如果你的分支叫 master，请把这里的 main 改成 master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write 
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      - name: Generate README.md
+        run: |
+          python -c "
+          import os
+          import urllib.parse
+          
+          # 获取当前目录下所有图片文件
+          files = [f for f in os.listdir('.') if os.path.isfile(f) and f.lower().endswith(('.png', '.jpg', '.jpeg'))]
+          # 按文件的修改时间倒序排列，确保新图在最前面
+          files.sort(key=lambda x: os.path.getmtime(x), reverse=True)
+          
+          with open('README.md', 'w', encoding='utf-8') as f:
+              f.write('# 我的自动图库\n\n')
+              for img in files:
+                  # 处理文件名，防止包含空格或特殊字符导致无法显示
+                  safe_name = urllib.parse.quote(img)
+                  f.write(f'![{img}]({safe_name})\n\n')
+          "
+
+      - name: Commit and Push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add README.md
+          # 如果有新图片导致 README 发生变化，就提交并推送
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update gallery in README" && git push)
