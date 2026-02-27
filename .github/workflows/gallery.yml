@@ -3,11 +3,9 @@ name: Auto Generate Image Gallery
 on:
   push:
     paths:
-      - '**.png'
-      - '**.jpg'
-      - '**.jpeg'
+      - 'images/**'  # 精准监控 images 文件夹，只有这里面有新图才干活
     branches:
-      - main  # 如果你的分支叫 master，请把这里的 main 改成 master
+      - main
 
 jobs:
   build:
@@ -30,17 +28,21 @@ jobs:
           import os
           import urllib.parse
           
-          # 获取当前目录下所有图片文件
-          files = [f for f in os.listdir('.') if os.path.isfile(f) and f.lower().endswith(('.png', '.jpg', '.jpeg'))]
-          # 按文件的修改时间倒序排列，确保新图在最前面
-          files.sort(key=lambda x: os.path.getmtime(x), reverse=True)
-          
-          with open('README.md', 'w', encoding='utf-8') as f:
-              f.write('# 我的自动图库\n\n')
-              for img in files:
-                  # 处理文件名，防止包含空格或特殊字符导致无法显示
-                  safe_name = urllib.parse.quote(img)
-                  f.write(f'![{img}]({safe_name})\n\n')
+          image_dir = 'images'
+          if os.path.exists(image_dir):
+              # 精准获取 images 文件夹下的所有图片
+              files = [f for f in os.listdir(image_dir) if f.lower().endswith(('.png', '.jpg', '.jpeg'))]
+              
+              # 按文件名倒序排列，在云端比按时间排更稳定
+              files.sort(reverse=True)
+              
+              with open('README.md', 'w', encoding='utf-8') as f:
+                  f.write('# 我的自动图库\n\n')
+                  for img in files:
+                      # 把文件夹名字拼接上去
+                      img_path = f'{image_dir}/{img}'
+                      safe_path = urllib.parse.quote(img_path, safe='/')
+                      f.write(f'![]({safe_path})\n\n')
           "
 
       - name: Commit and Push changes
@@ -48,5 +50,4 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add README.md
-          # 如果有新图片导致 README 发生变化，就提交并推送
           git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update gallery in README" && git push)
