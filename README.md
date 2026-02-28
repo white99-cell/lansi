@@ -102,11 +102,7 @@
 
 ![](images/nai_esenwx_873.png)
 
-![](images/nai_eesork_817.png)
-
 ![](images/nai_dg1pdh_632.png)
-
-![](images/nai_df0rl2_2017.png)
 
 ![](images/nai_da9or_638.png)
 
