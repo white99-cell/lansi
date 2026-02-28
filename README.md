@@ -66,8 +66,6 @@
 
 ![](images/nai_lonjcf_2730.png)
 
-![](images/nai_kjjxru_648.png)
-
 ![](images/nai_kiw6jn_848.png)
 
 ![](images/nai_kczon9_1683.png)
