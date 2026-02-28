@@ -10,8 +10,6 @@
 
 ![](images/nai_vnfbrl_3057.png)
 
-![](images/nai_vimzo5_573.png)
-
 ![](images/nai_v4g5yj_3096.png)
 
 ![](images/nai_v1ny8w_1482.png)
