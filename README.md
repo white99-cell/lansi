@@ -54,8 +54,6 @@
 
 ![](images/nai_n1xami_2984.png)
 
-![](images/nai_mwajle_2448.png)
-
 ![](images/nai_muqpt6_821.png)
 
 ![](images/nai_md8o7c_1686.png)
