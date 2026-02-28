@@ -84,15 +84,11 @@
 
 ![](images/nai_hutli3_2968.png)
 
-![](images/nai_hr8iuq_2517.png)
-
 ![](images/nai_hjekwj_607.png)
 
 ![](images/nai_hezb85_875.png)
 
 ![](images/nai_h94l1q_830.png)
-
-![](images/nai_gi9rub_442.png)
 
 ![](images/nai_ftjcnw_842.png)
 
