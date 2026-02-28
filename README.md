@@ -132,15 +132,11 @@
 
 ![](images/nai_b1k0i_2969.png)
 
-![](images/nai_af363j_1041.png)
-
 ![](images/nai_a8h2p0_3239.png)
 
 ![](images/nai_9rmwxv_1466.png)
 
 ![](images/nai_994np9_1509.png)
-
-![](images/nai_96xi69_630.png)
 
 ![](images/nai_96pqlb_3278.png)
 
@@ -162,8 +158,6 @@
 
 ![](images/nai_6dc56i_3376.png)
 
-![](images/nai_65w7cn_440.png)
-
 ![](images/nai_53n5og_1656.png)
 
 ![](images/nai_4ypgqq_2852.png)
@@ -171,8 +165,6 @@
 ![](images/nai_4y26i9_2723.png)
 
 ![](images/nai_4bbzy1_1414.png)
-
-![](images/nai_47c9it_2504.png)
 
 ![](images/nai_44tz92_1562.png)
 
