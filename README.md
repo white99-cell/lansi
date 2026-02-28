@@ -174,13 +174,9 @@
 
 ![](images/nai_3i536r_2516.png)
 
-![](images/nai_3cygq5_2012.png)
-
 ![](images/nai_343tb0_1660.png)
 
 ![](images/nai_33vo44_1523.png)
-
-![](images/nai_2tyi38_2511.png)
 
 ![](images/nai_2hh8ti_1619.png)
 
