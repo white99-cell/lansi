@@ -2,8 +2,6 @@
 
 ![](images/nai_yctsj4_2406.png)
 
-![](images/nai_xvgtsi_575.png)
-
 ![](images/nai_xmtna7_2919.png)
 
 ![](images/nai_xaymcl_1472.png)
