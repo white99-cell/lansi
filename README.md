@@ -1,7 +1,5 @@
 # 我的自动图库
 
-![](images/nai_yctsj4_2406.png)
-
 ![](images/nai_xmtna7_2919.png)
 
 ![](images/nai_xaymcl_1472.png)
@@ -9,8 +7,6 @@
 ![](images/nai_wccp3m_662.png)
 
 ![](images/nai_vvliz_2816.png)
-
-![](images/nai_vqvobo_633.png)
 
 ![](images/nai_vnfbrl_3057.png)
 
