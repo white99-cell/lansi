@@ -26,8 +26,6 @@
 
 ![](images/nai_qgfhe4_3104.png)
 
-![](images/nai_q51t4n_2003.png)
-
 ![](images/nai_q50t86_697.png)
 
 ![](images/nai_q4szg8_612.png)
